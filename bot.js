@@ -16,7 +16,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 //TODO: make seek system
 //TODO: make volume controller
 //TODO: make remove and swap nicer(?)
-//TODO: redo queue, player system to allow multiple server usage. Maybe add ability to listen across servers? Idk what to do about the "nowplaying" status though.
+//TODO: redo queue, player system to allow multiple server usage. Maybe add ability to listen across servers?
 var queue = [];
 var connection;
 var starttime;
