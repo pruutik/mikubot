@@ -51,7 +51,7 @@ function nextQueue(force = false){
         if(connection){
             setTimeout(() => {
                 if(player.state.status === 'idle'){
-                    if(connection) connection.destroy();
+                    if(connection){connection.destroy()};
                 }
             },180_000);
         }
