@@ -51,7 +51,10 @@ function nextQueue(force = false){
         if(connection){
             setTimeout(() => {
                 if(player.state.status === 'idle'){
-                    if(connection){connection.destroy()};
+                    if(connection){
+                        connection.destroy();
+                        connection = null;
+		    };
                 }
             },180_000);
         }
@@ -86,7 +89,10 @@ player.on(AudioPlayerStatus.Idle, () => {
 player.on(AudioPlayerStatus.Paused, () => {
     setTimeout(() => {
         if(player.state.status === 'paused'){
-            if(connection) connection.destroy();
+            if(connection){
+                connection.destroy();
+                connection = null;
+	    }
         }
     },600_000);
 });
@@ -305,6 +311,7 @@ client.on('interactionCreate', async interaction => {
     else if(interaction.commandName === 'leave'){
         if(connection){
             connection.destroy();
+            connection = null;
         }
         try{await interaction.reply('Left the voice channel!');}catch{console.log('Couldn\'t send message')};
     }
