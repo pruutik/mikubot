@@ -336,7 +336,7 @@ client.on('interactionCreate', async interaction => {
     }
     else if(interaction.commandName === 'remove'){
         const index = interaction.options.getString('index') - 1;
-        if(index > queue.length){
+        if(index > queue.length || index < 0){
             try{await interaction.reply({content: 'Invalid index positions.', ephemeral: true});}catch{console.log('Couldn\'t send message')};
             return;
         }
