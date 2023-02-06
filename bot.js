@@ -318,7 +318,7 @@ client.on('interactionCreate', async interaction => {
     else if(interaction.commandName === 'swap'){
         const index1 = interaction.options.getString('index1');
         const index2 = interaction.options.getString('index2');
-        if(index1 > queue.length || index2 > queue.length){
+        if(index1 > queue.length || index2 > queue.length || index1 < 0 || index2 < 0){
             try{await interaction.reply({content: 'Invalid index positions.', ephemeral: true});}catch{console.log('Couldn\'t send message')};
             return;
         }
