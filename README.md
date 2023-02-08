@@ -13,7 +13,7 @@ a very nice bot
 		"token": "your bot's token"
 	}
 	```
-	*Note: clientId is only required for command registration.*
+	*Note: `clientId` is only required for command registration.*
 
 3. Run `node commands.js`
 
