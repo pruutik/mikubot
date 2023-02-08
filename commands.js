@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v10');
-const { clientId, guildId, token } = require('./config.json');
+const { clientId, token } = require('./config.json');
 
 const commands = [
 	// Add all commands here. Empty to clear.
@@ -80,6 +80,6 @@ const rest = new REST({ version: '10' }).setToken(token);
 
 // Remember to set the application.commands scope
 
-rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
+rest.put(Routes.applicationCommands(clientId), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
 	.catch(console.error);

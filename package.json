@@ -1,17 +1,17 @@
 {
-  "name": "discordjsbot",
+  "name": "mikubot",
   "version": "1.0.0",
-  "description": "test bot",
+  "description": "The world is mine!",
   "main": "bot.js",
   "scripts": {
     "start": "bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "prutik",
+  "author": "pruutik",
   "license": "ISC",
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
-    "@discordjs/opus": "^0.5.3",
+    "@discordjs/opus": "^0.9.0",
     "@discordjs/rest": "^0.3.0",
     "@discordjs/voice": "^0.8.0",
     "discord-api-types": "^0.30.0",
@@ -21,6 +21,6 @@
     "ytdl-core": "^4.11.0"
   },
   "engines": {
-    "node": "16.x"
+    "node": ">=16.9.0"
   }
 }

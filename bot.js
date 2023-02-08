@@ -1,7 +1,7 @@
 // Require the necessary discord.js classes
 const { Client, Intents, MessageEmbed } = require('discord.js');
 const { joinVoiceChannel, createAudioPlayer, NoSubscriberBehavior, createAudioResource, AudioPlayerStatus } = require('@discordjs/voice');
-// const { token } = require('./config.json');
+const { token } = require('./config.json');
 const ytdl = require('ytdl-core');
 const fs = require('fs');
 const yts = require('yt-search');
@@ -353,4 +353,4 @@ client.on('interactionCreate', async interaction => {
 });
 
 // Login to Discord with your client's token
-client.login(process.env.token);
+client.login(token);
