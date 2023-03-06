@@ -227,7 +227,7 @@ client.on('interactionCreate', async interaction => {
                     .setColor('#00ffff')
                     .setDescription('Done!');
                 try{await interaction.editReply({embeds: [vidEmbed, stateEmbed]});}catch{console.log('Couldn\'t edit message')};
-                setTimeout(() => {try{interaction.editReply({embeds: [vidEmbed]});}catch{console.log('Couldn\'t edit message')};}, 3_000);
+                setTimeout(async () => {try{await interaction.editReply({embeds: [vidEmbed]});}catch{console.log('Couldn\'t edit message')};}, 3_000);
             });
         }
         else{
@@ -235,7 +235,7 @@ client.on('interactionCreate', async interaction => {
                 .setColor('#00ffff')
                 .setDescription('Already downloaded!');
             try{await interaction.editReply({embeds: [vidEmbed, stateEmbed]});}catch{console.log('Couldn\'t edit message')};
-            setTimeout(() => {try{interaction.editReply({embeds: [vidEmbed]})}catch{console.log('Couldn\'t edit message')};}, 3_000);
+            setTimeout(async () => {try{await interaction.editReply({embeds: [vidEmbed]})}catch{console.log('Couldn\'t edit message')};}, 3_000);
         }
 	}
     else if(interaction.commandName === 'pause'){
